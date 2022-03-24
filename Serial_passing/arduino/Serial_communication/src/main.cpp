@@ -1,9 +1,19 @@
-#include <Arduino.h>
+# include <Arduino.h>
 
-void setup() {
-  // put your setup code here, to run once:
+   unsigned  long count = 0;
+
+void setup ()
+{
+  Serial.begin(115200);
+
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop ()
+{
+  while (true)
+  {
+    count++;
+    delay(100);
+    Serial.println(count);
+  }
 }
